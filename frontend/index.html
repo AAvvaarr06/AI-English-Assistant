@@ -9,9 +9,9 @@
 
 <title>AI英语助手</title>
 
-<link rel="icon" href="data:,">
 
 <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -23,20 +23,22 @@
 
 
 <h1>
-AI英语助手 🚀
+📚 AI英语助手 🚀
 </h1>
 
 
+
 <p>
-上传英语文章，AI自动分析翻译
+上传英语文章，自动翻译并解析单词
 </p>
+
 
 
 
 <div class="upload-box">
 
 
-<input 
+<input
 id="fileInput"
 type="file"
 accept=".docx"
@@ -44,7 +46,7 @@ accept=".docx"
 
 
 
-<button 
+<button
 id="analyzeBtn"
 type="button">
 
@@ -58,6 +60,8 @@ type="button">
 
 
 
+
+
 <div id="result">
 
 等待上传文件...
@@ -66,11 +70,57 @@ type="button">
 
 
 
+
+
+<div id="wordCard">
+
+
+<button id="closeWord">
+
+×
+
+</button>
+
+
+
+<h2 id="wordTitle">
+
+单词
+
+</h2>
+
+
+
+
+<p id="wordMeaning">
+
+中文：
+
+</p>
+
+
+
+<p id="wordExample">
+
+例句：
+
+</p>
+
+
+
 </div>
 
 
 
-<script src="./app.js?v=999"></script>
+
+</div>
+
+
+
+
+
+<script src="app.js?v=6"></script>
+
 
 
 </body>
