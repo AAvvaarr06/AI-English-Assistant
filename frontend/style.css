@@ -1,83 +1,44 @@
-/* =====================
-   全局
-===================== */
+* {
+    box-sizing: border-box;
+}
 
-body{
 
-    margin:0;
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
 
     font-family:
     "Microsoft YaHei",
+    Arial,
     sans-serif;
 
-    background:#eef3ff;
+    background:
+    linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8fafc
+    );
 
 }
 
 
 
+.container {
 
-/* =====================
-   主容器
-===================== */
+    width: 900px;
 
+    max-width: 90%;
 
-.container{
-
-    width:80%;
-
-    max-width:1000px;
-
-    margin:50px auto;
-
-    text-align:center;
-
-}
-
-
-
-
-/* =====================
-   标题
-===================== */
-
-
-h1{
-
-    font-size:48px;
-
-    color:#2454d8;
-
-}
-
-
-
-p{
-
-    font-size:22px;
-
-    color:#555;
-
-}
-
-
-
-
-
-/* =====================
-   上传区域
-===================== */
-
-
-.upload-box{
-
-    margin-top:40px;
+    margin:
+    50px auto;
 
     background:white;
 
     padding:40px;
 
-    border-radius:30px;
+    border-radius:20px;
 
     box-shadow:
     0 10px 30px rgba(0,0,0,0.08);
@@ -86,8 +47,23 @@ p{
 
 
 
+h1 {
 
-input{
+    text-align:center;
+
+    color:#2563eb;
+
+    font-size:36px;
+
+}
+
+
+
+.container > p {
+
+    text-align:center;
+
+    color:#666;
 
     font-size:18px;
 
@@ -95,238 +71,155 @@ input{
 
 
 
-
-/* =====================
-   按钮
-===================== */
-
-
-button{
-
-
-    background:#3478f6;
-
-    color:white;
-
-    border:none;
-
-    padding:15px 40px;
-
-    border-radius:15px;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:0.3s;
-
-
-}
-
-
-
-button:hover{
-
-
-    background:#2454d8;
-
-    transform:translateY(-3px);
-
-
-}
-
-
-
-
-/* =====================
-   结果区域
-===================== */
-
-
-#result{
-
-
-    margin-top:40px;
-
-    background:white;
-
-    padding:40px;
-
-    border-radius:30px;
-
-    text-align:left;
-
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-
-
-}
-
-
-
-
-h2{
-
-
-    color:#2454d8;
-
-
-}
-
-
-
-
-
-.content{
-
-
-    background:#f3f6ff;
-
-    padding:20px;
-
-    border-radius:15px;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-
-}
-
-
-
-
-/* =====================
-   可点击单词
-===================== */
-
-
-.word{
-
-
-    cursor:pointer;
-
-    color:#2563eb;
-
-    margin:5px;
-
-    font-size:20px;
-
-    display:inline-block;
-
-    transition:0.2s;
-
-
-}
-
-
-
-
-.word:hover{
-
-
-    color:#ff6600;
-
-    text-decoration:underline;
-
-    transform:scale(1.05);
-
-
-}
-
-
-
-
-/* =====================
-   单词卡片
-===================== */
-
-
-#wordCard{
-
-
-    display:none;
+.upload-box {
 
 
     margin-top:30px;
 
-    background:white;
-
     padding:30px;
 
-    border-radius:30px;
+    border-radius:15px;
 
+    background:#f8fafc;
 
-    text-align:left;
-
-
-    box-shadow:
-
-    0 10px 30px rgba(0,0,0,0.1);
-
+    text-align:center;
 
 }
 
 
 
+input[type=file]{
 
 
-#wordTitle{
-
-
-    color:#2454d8;
-
-    font-size:30px;
-
+    padding:10px;
 
 }
 
 
 
-
-#wordMeaning,
-#wordExample{
+button {
 
 
-    font-size:20px;
+    margin-left:15px;
 
-    color:#444;
-
-    line-height:1.8;
-
-
-}
+    padding:
+    12px 25px;
 
 
-
-
-
-/* =====================
-   关闭按钮
-===================== */
-
-
-#closeWord{
-
-
-    float:right;
-
-    background:#ff5c5c;
-
-    padding:8px 15px;
+    border:none;
 
     border-radius:10px;
 
 
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
 }
 
 
 
-#closeWord:hover{
+button:hover {
 
 
-    background:#d93636;
+    background:#1d4ed8;
 
+}
+
+
+
+
+#result {
+
+
+    margin-top:30px;
+
+    padding:25px;
+
+
+    background:#f9fafb;
+
+    border-radius:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+.content {
+
+
+    font-size:18px;
+
+}
+
+
+
+.word {
+
+
+    cursor:pointer;
+
+    margin-right:6px;
+
+    color:#2563eb;
+
+}
+
+
+
+.word:hover {
+
+
+    text-decoration:underline;
+
+}
+
+
+
+
+#wordCard {
+
+
+    position:fixed;
+
+    right:40px;
+
+    bottom:40px;
+
+
+    width:300px;
+
+
+    padding:25px;
+
+
+    background:white;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+#closeWord {
+
+
+    float:right;
+
+    background:#ef4444;
+
+    padding:5px 10px;
 
 }
